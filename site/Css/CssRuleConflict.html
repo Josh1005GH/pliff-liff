@@ -5,9 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Css Rule Conflict</title>
 
-    <link rel="stylesheet" href="/Css/SubCss/CssRuleConflict.css" />
+    <link rel="stylesheet" href="./SubCss/CssRuleConflict.css" />
+    <style>
+      p {
+        color: maroon;
+      }
+    </style>
   </head>
   <body>
     <h3>Css Rule Conflict</h3>
+
+    <section>
+      <h4>1. Origin Examples</h4>
+      <p>Origin: the last declaration wins</p>
+      <p style="color: aqua">Origin: the last declaration wins</p>
+    </section>
+
+    <section>
+      <h4>2. Specification</h4>
+      <p style="color: black; background-color: beige">
+        Specificity score: Style >> ID>> Class>>Tag
+      </p>
+    </section>
   </body>
 </html>
